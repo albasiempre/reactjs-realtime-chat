@@ -4,14 +4,20 @@ class AxiosWrapper {
 
   static create() {
     // base instance
+    // 多分、cancelTokenの設定は不要な気がするので、サーバーサイドcors設定完了後、消してしまっても良いかもしれません
+    const CancelToken = axios.CancelToken;
+    const source = CancelToken.source();
+
     const instance = axios.create({
       baseURL: "https://node-app-separated-187489b363c3.herokuapp.com/",
       headers: {
         'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json;charset=UTF-8'
+        'Content-Type': 'application/json;charset=UTF-8',
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
       },
-      timeout: 30000, // 30sec
-      withCredentials: true
+      timeout: 30000,
+      withCredentials: true,
+      cancelToken: source.token // これは消しても良さそう
     })
 
     // registered request interceptor
