@@ -6,7 +6,10 @@ export const loginCall = async (user, dispatch) => {
   try {
     // console.log("======loginCall");
     // APIのルーティング設定を参照している
-    const response = await AxiosWrapper.create().post("api/auth/login", user);
+    const response = await AxiosWrapper.create().post(
+        "api/auth/login",
+        user
+    );
     console.log(response);
     dispatch({ type: "LOGIN_SUCCESS", payload: response.data });
     return response;
