@@ -7,8 +7,12 @@ import {
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+<<<<<<< HEAD
 // import axios from "axios";
 import AxiosWrapper from "../../lib/axiosWrapper";
+=======
+import axios from "axios";
+>>>>>>> e82e8403440f8f584e42634b8ca5835665355ee0
 
 export default function Topbar() {
   const { user } = useContext(AuthContext);
@@ -20,7 +24,11 @@ export default function Topbar() {
     setSearchTerm(e.target.value);
     if (e.target.value.trim()) {
       try {
+<<<<<<< HEAD
         const res = await AxiosWrapper.create().get(`/users/search?term=${e.target.value.trim()}`);
+=======
+        const res = await axios.get(`/users/search?term=${e.target.value.trim()}`);
+>>>>>>> e82e8403440f8f584e42634b8ca5835665355ee0
         setSearchResults(res.data);
       } catch (err) {
         console.error("ユーザー検索中にエラーが発生しました。", err);

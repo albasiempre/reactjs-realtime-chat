@@ -4,7 +4,6 @@ import {
   Logout,
   MessageRounded,
   Notifications,
-  Person,
   Search,
   Settings,
 } from "@mui/icons-material";
