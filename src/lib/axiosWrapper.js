@@ -19,8 +19,7 @@ class AxiosWrapper {
         //'Host': 'node-app-separated-187489b363c3.herokuapp.com',
       },
       timeout: 30000,
-      withCredentials: true,
-      cancelToken: source.token // これは消しても良さそう
+      withCredentials: true
     })
 
     // registered request interceptor
