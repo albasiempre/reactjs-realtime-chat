@@ -9,7 +9,7 @@ class AxiosWrapper {
     const source = CancelToken.source();
 
     const instance = axios.create({
-      baseURL: "https://node-app-separated-187489b363c3.herokuapp.com/",
+      baseURL: "https://server.albasiempre.com",
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json;charset=UTF-8',
