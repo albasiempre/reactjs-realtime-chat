@@ -42,7 +42,7 @@ class AxiosWrapper {
         (error) => {
           // レスポンス取得失敗時(ステータスコード: 200以外と思われる)
           console.log('---- response(error) ----')
-          console.log('%o', error);
+          // console.log('%o', error);
         }
     );
 
