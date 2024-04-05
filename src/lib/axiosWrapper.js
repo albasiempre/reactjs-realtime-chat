@@ -5,8 +5,6 @@ class AxiosWrapper {
   static create() {
     // base instance
     // 多分、cancelTokenの設定は不要な気がするので、サーバーサイドcors設定完了後、消してしまっても良いかもしれません
-    const CancelToken = axios.CancelToken;
-    const source = CancelToken.source();
 
     const instance = axios.create({
       baseURL: "https://node-app-separated-187489b363c3.herokuapp.com",
